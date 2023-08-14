@@ -28,7 +28,6 @@ test.describe('Todo tests', () => {
         await newTodoPage.addNewElementUsingApi(request, user);
         await todoPage.load(page);
         await todoPage.deleteElement(page);
-
         const newItem = await todoPage.getNewElement(page);
         await expect(newItem).toHaveCount(0);
     });
